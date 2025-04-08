@@ -1,0 +1,91 @@
+<html lang="en">
+
+<head> 
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="https://melonking.net/styles/flood.css" rel="stylesheet" type="text/css" media="all" />
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Last.fm Music Sharing</title>
+  <style>
+    #listeningStatus { 
+      display: flex;
+      flex-direction: row;
+    }
+    
+    #trackStatus { 
+      margin-top: 0;
+    }
+
+    #musicBox {
+      display: flex;
+      flex-direction: row;
+      position: 90px;
+      height: 100px;
+      width: 200px;
+      grid-column: 3 / 4;
+      grid-row: 2 / 2;
+    }
+
+    #trackInfo #trackName {
+      margin: 0;
+      float: left;
+    }
+
+    #trackInfo #artistName {
+      margin-top: 7px;
+    }
+
+    #listening img {
+      height: 64px;
+      width: 64px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Last.fm Music Sharing</h1>
+    
+    <div id="usernameForm" class="form-container">
+      <h2>Enter your Last.fm username</h2>
+      <div class="input-group">
+        <input type="text" id="lastFmUsername" placeholder="Your Last.fm username">
+        <button id="submitUsername">Submit</button>
+      </div>
+      <p id="savedUsername" style="margin-top: 10px; font-size: 0.9em; color: #b3b3b3;"></p>
+    </div>
+    
+    <div id="playerContainer" class="player-container">
+      <!-- Player cards will be dynamically added here -->
+    </div>
+  </div>
+
+  <template id="playerCardTemplate">
+    <div class="player-card">
+      <div class="websim-user">
+        <img class="avatar" src="" alt="User avatar">
+        <h3 class="username"></h3>
+      </div>
+      <div class="infoBox music-info">
+        <div class="listeningStatus">
+          <div class="blob"></div>
+          <p class="trackStatus">Listening to:</p>
+        </div>
+        <div class="musicBox">
+          <img class="album-art" src="placeholder.png"/>
+          <div class="trackInfo">
+            <h3 class="trackName">Loading...</h3>
+            <p class="artistName">Loading...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

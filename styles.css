@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1DB954; /* Spotify green */
+}
+
+.form-container {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.form-container h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3E3E3E;
+    color: white;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1DB954;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #1ed760;
+}
+
+.player-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.player-card {
+    background-color: #282828;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+}
+
+.websim-user {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #3E3E3E;
+    gap: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.username {
+    font-weight: bold;
+    color: #1DB954;
+}
+
+.music-info {
+    padding: 15px;
+}
+
+.listeningStatus {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.blob {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #5d5d5d;
+}
+
+.musicBox {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.album-art {
+    width: 64px;
+    height: 64px;
+    border-radius: 4px;
+}
+
+.trackInfo {
+    flex: 1;
+}
+
+.trackName {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.artistName {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+}
+
